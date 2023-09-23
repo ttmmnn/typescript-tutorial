@@ -6,9 +6,9 @@ module.exports = {
     path: `${__dirname}/dist`,
     filename: 'bundle.js',
   },
-  mode: 'development', //modeはproductionモードとdevelopmentモードの2つある
+  mode: 'production', //modeはproductionモードとdevelopmentモードの2つある
   resolve: {
-    extensitons: ['.ts', '.js'], //拡張子を指定してくれる
+    extensions: ['.ts', '.js'], //拡張子を指定してくれる
   },
   devServer: {
     static: {
@@ -20,7 +20,7 @@ module.exports = {
     rules: [
       {
         test: /\.ts$/, //拡張子が.tsのファイルをコンパイルする
-        lorder: 'ts-lorder',
+        loader: 'ts-loader',
       },
     ],
   },
